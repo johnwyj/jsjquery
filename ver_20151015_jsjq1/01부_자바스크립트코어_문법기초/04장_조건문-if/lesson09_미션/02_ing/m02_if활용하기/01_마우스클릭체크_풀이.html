@@ -4,8 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
     <script>
-
-        /*
+/*
          미션 02: 풀이 전 코드를 간단하게 만들어 주세요.
 
         // 풀이 전 코드:
@@ -23,14 +22,14 @@
             document.write("도대체, 뭘 누른거죠?<br>");
         */
 
-        // 1. 마우스 버튼 입력받기.
-        var value = window.prompt("마우스 버튼을 눌러주세요(입력해주세요)", "왼쪽");
+// 1. 마우스 버튼 입력받기.
+var value = window.prompt("마우스 버튼을 눌러주세요(입력해주세요)", "왼쪽");
 
-        // 2. 비교처리.
-
-
-
-    </script>
+// 2. 비교처리.
+if (value == "오른쪽" || value == "원쪽" || value == "가운데")
+  document.write(value + "! 버튼을 누르셨군요.<br>");
+else document.write("도대체 뭘 누른거죠?");
+</script>
 </head>
 
 <body></body>

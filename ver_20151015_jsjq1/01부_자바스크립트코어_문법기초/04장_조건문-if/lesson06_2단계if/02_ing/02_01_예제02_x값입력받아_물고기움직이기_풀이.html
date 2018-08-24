@@ -37,7 +37,7 @@
 
     <script type="text/javascript"  src="../../libs/jquery-1.11.0.min.js"></script>
     <script>
-        /*
+    /*
 
          예제02: 물고기 움직이기
          prompt()를 이용해 x(left) 값을 입력받아 입력 값이
@@ -50,18 +50,25 @@
              물고기.css(“left”,위치 값)를 해주면 됩니다.
 
          */
-        $(document).ready(function() {
-            // 물고기 노드 구하기.
-            var $fish = $("#img1");
+$(document).ready(function() {
+  // 물고기 노드 구하기.
+  var $fish = $("#img1");
 
-            // 버튼에 이벤트 걸기.
-            $("#btn_start").click(function() {
-                // 여기에 소스를 입력해주세요.
+  // 버튼에 이벤트 걸기.
+  $("#btn_start").click(function() {
+    // 여기에 소스를 입력해주세요.
 
-            });
-        })
+    var value = window.prompt("x좌표 값을 입력해주세요.", 0);
 
-    </script>
+    value = parseInt(value);
+    if (value >= 0 && value <= 430) {
+      $fish.css("left", value);
+    } else {
+      alert("유효한 좌표 값이 입력되지 않았습니다.");
+    }
+  });
+});
+</script>
 </head>
 
 <body>

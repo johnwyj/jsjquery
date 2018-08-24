@@ -7,7 +7,7 @@
     </style>
     <script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"></script>
     <script>
-        /*
+    /*
          미션02: 랜덤 경품 추첨기
          이번 미션은 앞에서 풀었던 경품 추첨기를 업그레이드 한 내용입니다.
          추첨 버튼을 클릭할 때마다 1에서 10까지의 숫자를 랜덤하게 뽑아(생성),
@@ -24,17 +24,32 @@
 
          */
 
+//풀이 전 코드:
+$(document).ready(function() {
+  // 버튼에 클릭 이벤트 리스너 등록
+  $("#start").click(function() {
+    // 여기에 소스를 입력해 주세요.
+    var luckyValue = parseInt(Math.random() * 10) + 1;
 
-        //풀이 전 코드:
-        $(document).ready(function() {
-            // 버튼에 클릭 이벤트 리스너 등록
-            $("#start").click(function() {
-                // 여기에 소스를 입력해 주세요.
+    switch (luckyValue) {
+      case 3:
+        result = "refre";
+        break;
+      case 5:
+        result = "washing";
+        break;
+      case 8:
+        result = "TV";
+        break;
+      default:
+        result = "nothing";
+        break;
+    }
 
-            })
-        });
-
-    </script>
+    alert(result);
+  });
+});
+</script>
 </head>
 
 <body>

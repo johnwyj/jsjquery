@@ -6,15 +6,16 @@
     <script src="../../libs/jquery-1.11.0.min.js"></script>
 
     <script>
-        /*
+    /*
 
          예제02: 배경색을 빨간색으로 변경해주세요.
 
          */
-        $(document).ready(function() {
-
-        })
-    </script>
+$(document).ready(function() {
+  var bgColor = 0xf00;
+  $("body").css("background-color", "#" + bgColor.toString(16));
+});
+</script>
 
 </head>
 

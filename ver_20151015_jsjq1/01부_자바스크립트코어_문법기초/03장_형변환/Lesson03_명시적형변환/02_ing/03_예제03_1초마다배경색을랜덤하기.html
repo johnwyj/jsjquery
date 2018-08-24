@@ -6,17 +6,21 @@
     <script src="../../libs/jquery-1.11.0.min.js"></script>
 
     <script>
-        /*
+    /*
          예제 03: 1초마다 한 번씩 배경색을 랜덤하게 변경해 주세요.
 
          무작성 따라하기
          */
-        $(document).ready(function(){
+$(document).ready(function() {
+  setInterval(function() {
+    var color = Math.random() * 0xffffff;
+    color = parseInt(color);
+    color = color.toString(16);
 
-        })
-
-
-    </script>
+    $("body").css("background-color", "#" + color);
+  }, 1000);
+});
+</script>
 
 </head>
 

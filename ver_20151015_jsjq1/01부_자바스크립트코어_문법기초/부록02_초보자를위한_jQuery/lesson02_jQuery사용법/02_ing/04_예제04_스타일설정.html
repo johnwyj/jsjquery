@@ -12,23 +12,20 @@
         }
     </style>
     <script>
+</script>
 
-
-
-    </script>
-    
     <script src="../../libs/jquery-1.11.0.min.js"></script>
     <script>
-        /*
+    /*
          예제 04: 확인 버튼(#btnCheck)을 클릭하면 패널(#panel)의 외각선(border)을
          “4px solid #f00”으로 변경해주세요.
          */
-        $(document).ready(function(){
-
-
-        })
-        
-    </script>
+$(document).ready(function() {
+  $("$btnCheck").on("click", function() {
+    $("#panel").css("border", "4px solid #f00");
+  });
+});
+</script>
 
 </head>
 

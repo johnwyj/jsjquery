@@ -4,20 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
     <script>
-        /*
+    /*
 
          미션 01: 경품 추첨기 만들기
          수를 입력받아 이 값이 1이면 "당첨! 냉장고", 2이면 "당첨! 세탁기", 3이면 "당첨! TV", 이외의 경우는 모두 "꽝입니다."를 출력해주세요.
 
         */
 
-        //풀이 1
-        var luckyValue = window.prompt("두궁두궁! 행운의 번호를 고르세요.");
+//풀이 1
+var luckyValue = window.prompt("두궁두궁! 행운의 번호를 고르세요.");
 
-
-
-
-    </script>
+if (luckyValue == 1) {
+  alert("당첨!");
+} else if (luckyValue == 2) {
+  alert("washingmachine");
+} else if (luckyValue == 3) {
+  alert("꽝");
+}
+</script>
 </head>
 
 <body></body>
