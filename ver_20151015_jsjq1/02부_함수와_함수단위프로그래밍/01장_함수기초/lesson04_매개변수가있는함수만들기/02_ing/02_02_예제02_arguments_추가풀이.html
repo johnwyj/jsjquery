@@ -5,14 +5,15 @@
     <title>예제</title>
 
     <script>
-        function showInfo(){
-            console.log("0 = "+?);
-            console.log("1 = "+?);
-            alert("안녕하세요."+?+"님의 나이는 "+?+"입니다.");
-        }
-        showInfo("딴동네", 30);
-
-    </script>
+    function showInfo() {
+  console.log("0 = " + arguments[0]);
+  console.log("1 = " + arguments[1]);
+  alert(
+    "안녕하세요." + arguments[0] + "님의 나이는 " + arguments[1] + "입니다."
+  );
+}
+showInfo("딴동네", 30);
+</script>
 
 </head>
 

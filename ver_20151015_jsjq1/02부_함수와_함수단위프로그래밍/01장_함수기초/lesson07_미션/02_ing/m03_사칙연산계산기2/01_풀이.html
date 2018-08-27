@@ -5,7 +5,6 @@
 <title>Untitled Document</title>
 
 <script type="text/javascript">
- 
 /*
 
  미션 03: 사칙연산 계산기 만들기 2
@@ -21,45 +20,41 @@
 
 */
 
+function calculator(op, num1, num2) {
+  var result = "";
 
-function calculator(op, num1,num2){
-    var result="";
+  switch (op) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
 
-    switch(op) {
-        case "+" :
-            result = num1 + num2;
-            break;
-        case "-" :
-            result = num1 - num2;
-            break;
-        case "*" :
-            result = num1 * num2;
-            break;
-        case "/" :
-            result = num1 / num2;
-            break;
-
-        default :
-            result = "지원하지 않는 연산자입니다";
-    }
-    return result;
+    default:
+      result = "지원하지 않는 연산자입니다";
+  }
+  return result;
 }
 
-
-document.write("더하기 = "+calculator("+", 20, 10), "<br>");
-document.write("더하기 = "+add(20, 10), "<br>");
-document.write("빼기 = "+sub(20, 10), "<br>");
-document.write("곱하기 = "+mul(20, 10), "<br>");
-document.write("나누기 = "+div(20, 10), "<br>");
-
-
+document.write("더하기 = " + calculator("+", 20, 10), "<br>");
+document.write("더하기 = " + add(20, 10), "<br>");
+document.write("빼기 = " + sub(20, 10), "<br>");
+document.write("곱하기 = " + mul(20, 10), "<br>");
+document.write("나누기 = " + div(20, 10), "<br>");
 </script>
 
 
 </head>
 
 <body>
-    
-       
+
+
 </body>
 </html>

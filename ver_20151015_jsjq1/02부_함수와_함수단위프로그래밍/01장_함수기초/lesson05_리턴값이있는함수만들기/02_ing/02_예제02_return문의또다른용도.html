@@ -5,16 +5,31 @@
     <title>예제</title>
 
     <script>
-        /*
+    /*
          예제02: 무한 루프를 돌며 숫자를 입력받고 입력받은 수의 합을 화면에 출력하는 기능을 sample()이라는 함수에 만들어 주세요.
          단, 입력 값이 0이면 즉시 실행을 멈춰 주세요.
 
-        
+
         */
 
+function sample() {
+  var sum = 0;
+  var count = 1;
 
-
-    </script>
+  while (true) {
+    var value = parseInt(window.prompt("enter number", 1));
+    if (value == 0) {
+      document.write("Finish");
+      return;
+    }
+    sum += value;
+    document.write(count + ". " + sum + "<br>");
+    count++;
+  }
+  document.write("We counted " + count + " times.");
+}
+sample();
+</script>
 
 </head>
 
