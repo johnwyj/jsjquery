@@ -45,10 +45,10 @@
 			background-image: url(images/newbtn.bar.6.png);
 		}
 	</style>
-	 
+
     <script src="../../../libs/jquery-1.11.0.min.js"></script>
 	<script>
-		/*
+	/*
 		 미션 02 탭메뉴를 함수로 만들기
 		 이번 단계에서는 하나의 함수를 이용해 첫 번째 탭메뉴가 동작하는 것처럼
 		 두 번째 탭메뉴도 동작할 수 있게 만드는 것입니다.
@@ -68,39 +68,36 @@
 
 
 		 */
-		$(document).ready(function(){
-			// 탭메뉴 코드가 동작할 수 있도록 tabMenu() 함수 호출
-			tabMenu("#tabMenu1 li");
+$(document).ready(function() {
+  // 탭메뉴 코드가 동작할 수 있도록 tabMenu() 함수 호출
+  tabMenu("#tabMenu1 li");
 
-			tabMenu("#tabMenu2 li");
-		});
+  tabMenu("#tabMenu2 li");
+});
 
+function tabMenu(selector) {
+  // 선택 한 탭메뉴를 저장할 변수
+  var $selectMenuItem = null;
 
-		function tabMenu(selector){
-			// 선택 한 탭메뉴를 저장할 변수
-			var $selectMenuItem =null;
+  // 메뉴 항목에 클릭 이벤트 등록
+  $(selector).click(function() {
+    // 기존 선택 메뉴 항목이 있으면 비 선택 상태로 만들기
+    if ($selectMenuItem != null) {
+      $selectMenuItem.removeClass("select");
+    }
 
-			// 메뉴 항목에 클릭 이벤트 등록
-			$(selector).click(function(){
+    // 클릭한 메뉴 항목을 신규 선택 메뉴 항목으로 저장
+    $selectMenuItem = $(this);
 
-				// 기존 선택 메뉴 항목이 있으면 비 선택 상태로 만들기
-				if($selectMenuItem!=null){
-				   $selectMenuItem.removeClass("select");
-				}
-
-				// 클릭한 메뉴 항목을 신규 선택 메뉴 항목으로 저장
-				$selectMenuItem = $(this);
-
-				// 선택 상태로 만들기
-				$selectMenuItem.addClass("select");
-
-			})
-		}
-	</script>
+    // 선택 상태로 만들기
+    $selectMenuItem.addClass("select");
+  });
+}
+</script>
 </head>
-	
+
 	<body>
-<p>첫 번째 탭메뉴</p>	    
+<p>첫 번째 탭메뉴</p>
 <ul class="tab-menu" id="tabMenu1">
 	<li class="menuitem1">google</li>
 	<li class="menuitem2">facebook</li>
@@ -108,7 +105,7 @@
 	<li class="menuitem4">twitter</li>
 	<li class="menuitem5">airbnb</li>
 	<li class="menuitem6">path</li>
-</ul>		
+</ul>
 <p>두 번째 탭메뉴</p>
 <ul class="tab-menu" id="tabMenu2">
 	<li class="menuitem1">google</li>
@@ -117,6 +114,6 @@
 	<li class="menuitem4">twitter</li>
 	<li class="menuitem5">airbnb</li>
 	<li class="menuitem6">path</li>
-</ul>	
+</ul>
 	</body>
 </html>

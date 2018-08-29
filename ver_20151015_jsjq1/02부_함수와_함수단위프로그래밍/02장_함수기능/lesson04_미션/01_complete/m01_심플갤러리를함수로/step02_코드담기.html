@@ -19,7 +19,7 @@
 
     <script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"></script>
     <script>
-        /*
+    /*
 
          미션 01 심플 갤러리를 함수로 만들기
          이번 미션은 01부 06장 반복문 for에서 만든 심플 이미지 갤러리를 함수를 이용해 만드는 것입니다.
@@ -51,8 +51,8 @@
              $img0.css({left:이동위치, top:이동위치});
 
          */
-        
-        /*
+
+/*
          step #02
             - 코드 담기
             
@@ -60,44 +60,44 @@
             - 함수 나누기 
             
          */
-        $(document).ready(function() {
-           init();
-           initEvent();
-        });
-        
-        var $images = null;
-        function init(){
-            // 이미지 찾기.
-            $images = $("#container1 img");
-        }
-        
-        function initEvent(){
-            $("#btnStart").click(function(){
-                 showGallery();
-           })  
-        }
-        
-        function showGallery(){
-             // 이미지 개수 구하기.
-            var length = $images.length;
+$(document).ready(function() {
+  init();
+  initEvent();
+});
 
-            // 이미지 배열하기.
-            for (var i = 0; i < length; i++) {
-                // n번째 이미지 구하기
-                var $img = $images.eq(i);
+var $images = null;
+function init() {
+  // 이미지 찾기.
+  $images = $("#container1 img");
+}
 
-                // 위치 값 구하기
-                var x = 100 + ((i % 3) * 200);
-                var y = 100 + (parseInt(i / 3) * 200);
+function initEvent() {
+  $("#btnStart").click(function() {
+    showGallery();
+  });
+}
 
-                // 위치 설정
-                $img.css({
-                    left : x,
-                    top : y
-                });
-            }
-        }
-    </script>
+function showGallery() {
+  // 이미지 개수 구하기.
+  var length = $images.length;
+
+  // 이미지 배열하기.
+  for (var i = 0; i < length; i++) {
+    // n번째 이미지 구하기
+    var $img = $images.eq(i);
+
+    // 위치 값 구하기
+    var x = 100 + (i % 3) * 200;
+    var y = 100 + parseInt(i / 3) * 200;
+
+    // 위치 설정
+    $img.css({
+      left: x,
+      top: y
+    });
+  }
+}
+</script>
 </head>
 
 <body>

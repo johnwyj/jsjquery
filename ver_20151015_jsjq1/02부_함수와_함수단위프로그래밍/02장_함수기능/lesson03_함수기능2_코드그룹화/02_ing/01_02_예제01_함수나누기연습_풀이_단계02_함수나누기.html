@@ -27,7 +27,7 @@
         </style>
         <script src="../../libs/jquery-1.11.0.min.js"></script>
         <script>
-            /*
+        /*
 
             예제01: 함수 나누기 연습
             이번 예제는 01부 04장 조건문if에서 풀었던 미션입니다. 함수를 이용해 코드를 그룹화해 주세요
@@ -43,35 +43,28 @@
 
             */
 
+$(document).ready(function() {
+  // 물고기 노드 구하기.
+  var $fish = $("#fish");
 
-            $(document).ready(function() {
+  // 버튼에 이벤트 걸기.
+  $("#btnStart").click(function() {
+    // 물고기 움직이기.
+    // 물고기 위치 값 구하기
+    var x = parseInt($("#txtX").val());
+    var y = parseInt($("#txtY").val());
 
-                // 물고기 노드 구하기.
-                var $fish = $("#fish");
-
-                // 버튼에 이벤트 걸기.
-                $("#btnStart").click(function() {
-
-                    // 물고기 움직이기.
-                    // 물고기 위치 값 구하기
-                    var x = parseInt($("#txtX").val());
-                    var y = parseInt($("#txtY").val());
-
-                    if ((x >= 0 && x <= 500) && y >= 0 && y <= 300) {
-
-                        $fish.css({
-                            left : x,
-                            top : y
-                        });
-
-                    } else {
-
-                        alert("입력된 값이 너무 큽니다. 다시 입력해주세요.");
-                    }
-                });
-            })
-
-        </script>
+    if (x >= 0 && x <= 500 && y >= 0 && y <= 300) {
+      $fish.css({
+        left: x,
+        top: y
+      });
+    } else {
+      alert("입력된 값이 너무 큽니다. 다시 입력해주세요.");
+    }
+  });
+});
+</script>
     </head>
 
     <body>

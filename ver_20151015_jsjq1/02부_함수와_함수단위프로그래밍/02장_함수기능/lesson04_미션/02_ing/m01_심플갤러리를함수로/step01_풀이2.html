@@ -23,6 +23,7 @@
 
          미션 01 심플 갤러리를 함수로 만들기
          이번 미션은 01부 06장 반복문 for에서 만든 심플 이미지 갤러리를 함수를 이용해 만드는 것입니다.
+
             요구사항:
             - 이미지 배열 시작 위치는 100*100 위치로 해주세요.
             - 시작 시 이미지를 2열 200*200 크기로 출력해 주세요.
@@ -43,57 +44,54 @@
          힌트:
              - 문서에서 이미지 노드 찾아 변수에 저장하기
              var $images = $("#container1 img");
-    
+
              - N번째 인덱스에 해당하는 이미지 접근하기(N은 0부터 시작)
              var $img0=$images.eq(0);   // 0번째 이미지 접근
-    
+
              - 이미지 위치 설정하기
              $img0.css({left:이동위치, top:이동위치});
 
          */
 
 /*
+         step #04
+            - 함수 호출
+
          step #03
-            - showGallery() 매개변수 만들기 
-            
+            - showGallery() 매개변수 만들기
+
          step #02
             - 코드 담기
-            
-         step #01 
-            - 함수 나누기 
-            
+
+         step #01
+            - 함수 나누기
+
          */
+
 $(document).ready(function() {
   init();
   initEvent();
+  showGallery(2, 200, 200);
 });
 
 var $images = null;
+
 function init() {
-  // 이미지 찾기.
   $images = $("#container1 img");
 }
 
 function initEvent() {
   $("#btnStart").click(function() {
-    showGallery();
+    showGallery(3, 150, 150);
   });
 }
 
 function showGallery(count, width, height) {
-  // 이미지 개수 구하기.
   var length = $images.length;
-
-  // 이미지 배열하기.
   for (var i = 0; i < length; i++) {
-    // n번째 이미지 구하기
     var $img = $images.eq(i);
-
-    // 위치 값 구하기
     var x = 100 + (i % count) * width;
     var y = 100 + parseInt(i / count) * height;
-
-    // 위치 설정
     $images.eq(i).css({
       left: x,
       top: y
