@@ -9,7 +9,7 @@
         list-style: none;
         height:80px;
     }
-    
+
     .tab-menu li {
         width:99px;
         height:40px;
@@ -45,43 +45,41 @@
         background-image: url(images/newbtn.bar.6.png);
     }
 </style>
-     
+
     <script src="../../../libs/jquery-1.11.0.min.js"></script>
 
 
 <script>
-    /*
+/*
      미션 02: 탭메뉴를 함수로 만들기
      이번 단계에서는 하나의 함수를 이용해 첫 번째 탭메뉴가 동작하는 것처럼
      두 번째 탭메뉴도 동작할 수 있게 만드는 것입니다.
      */
 
-    $(document).ready(function(){
-        /* 첫 번째 탭메뉴 처리 */
-        // 선택한 탭메뉴를 저장할 변수
-        var $selectMenuItem =null;
+$(document).ready(function() {
+  /* 첫 번째 탭메뉴 처리 */
+  // 선택한 탭메뉴를 저장할 변수
+  var $selectMenuItem = null;
 
-        // 메뉴 항목에 클릭 이벤트 등록
-        $("#tabMenu1 li").click(function(){
-            // 기존 선택 메뉴 항목이 있으면 비선택 상태로 만들기
-            if($selectMenuItem!=null){
-                $selectMenuItem.removeClass("select");
-            }
+  // 메뉴 항목에 클릭 이벤트 등록
+  $("#tabMenu1 li").click(function() {
+    // 기존 선택 메뉴 항목이 있으면 비선택 상태로 만들기
+    if ($selectMenuItem != null) {
+      $selectMenuItem.removeClass("select");
+    }
 
-            // 클릭한 메뉴 항목을 신규 선택 메뉴 항목으로 저장
-            $selectMenuItem = $(this);
-            // 선택 상태로 만들기
-            $selectMenuItem.addClass("select");
-        })
-    });
-
-
+    // 클릭한 메뉴 항목을 신규 선택 메뉴 항목으로 저장
+    $selectMenuItem = $(this);
+    // 선택 상태로 만들기
+    $selectMenuItem.addClass("select");
+  });
+});
 </script>
 
 </head>
-    
+
 <body>
-    <p>첫 번째 탭메뉴</p>     
+    <p>첫 번째 탭메뉴</p>
     <ul class="tab-menu" id="tabMenu1">
         <li class="menuitem1">google</li>
         <li class="menuitem2">facebook</li>
@@ -90,7 +88,7 @@
         <li class="menuitem5">airbnb</li>
         <li class="menuitem6">path</li>
     </ul>
-    <p>두 번째 탭메뉴</p>     
+    <p>두 번째 탭메뉴</p>
     <ul class="tab-menu" id="tabMenu2">
         <li class="menuitem1">google</li>
         <li class="menuitem2">facebook</li>
@@ -98,7 +96,7 @@
         <li class="menuitem4">twitter</li>
         <li class="menuitem5">airbnb</li>
         <li class="menuitem6">path</li>
-    </ul>   
+    </ul>
 </body>
 
 </html>
