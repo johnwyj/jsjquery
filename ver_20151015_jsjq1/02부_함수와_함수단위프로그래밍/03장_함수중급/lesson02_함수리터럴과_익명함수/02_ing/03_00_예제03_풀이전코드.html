@@ -10,9 +10,9 @@
         }
     </style>
     <script src="../../libs/jquery-1.11.0.min.js"></script>
-        
+
     <script>
-        /*
+    /*
          예제03: 버튼을 클릭할 때마다 클릭한 횟수와 함께 “안녕하세요. 환영합니다.” 메시지를 #info에 출력해 주세요.
          단, 페이지가 실행되면 바로 '0 안녕하세요. 환영합니다.' 메시지가 출력돼야 합니다.
 
@@ -24,21 +24,19 @@
 
         */
 
-        var count=0;
-        var $info = null;
+var count = 0;
+var $info = null;
 
-        $(document).ready(function() {
-            $info = $("#info");
+$(document).ready(function() {
+  $info = $("#info");
+});
+</script>
 
-        });
-
-    </script>
-
-</head>	
+</head>
 <body>
     <button id="btnStart">출력</button>
     <div id="info">
-        
+
     </div>
 </body>
 </html>

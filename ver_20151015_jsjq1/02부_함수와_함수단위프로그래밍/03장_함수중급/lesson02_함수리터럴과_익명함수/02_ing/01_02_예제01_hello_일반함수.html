@@ -5,21 +5,25 @@
 <title>예제</title>
 
     <script>
-        /*
+    /*
          예제 01: 함수 만드는 방법 3가지
 
          */
-        // 일반적인 방식과 객체 방식
+// 일반적인 방식과 객체 방식
 
+function hello(name) {
+  alert("welcome " + name);
+}
+hello("dnduddlek123");
 
-        // 객체 방식
-
-
-    </script>
+// 객체 방식
+var hello2 = new Function("name", "alert(name+'님  환영합니다.');");
+hello2("johnjang");
+</script>
 </head>
 
-	
+
 <body>
-	
+
 </body>
-</html>	
+</html>

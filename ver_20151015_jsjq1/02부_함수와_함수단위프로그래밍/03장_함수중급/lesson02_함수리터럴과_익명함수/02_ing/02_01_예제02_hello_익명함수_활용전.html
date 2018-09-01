@@ -5,20 +5,22 @@
 <title>예제</title>
     <script src="../../libs/jquery-1.11.0.min.js"></script>
     <script>
-        /*
+    /*
          예제 02: 익명함수 활용
 
          활용전
          */
-        $(document).ready(function() {
-
-        });
-
-    </script>
+$(document).ready(function() {
+  function hello() {
+    alert("안녕하세요. 환영합니다.");
+  }
+  $("#btnStart").click(hello);
+});
+</script>
 </head>
 
-	
+
 <body>
 <button id="btnStart">출력</button>
 </body>
-</html>	
+</html>
