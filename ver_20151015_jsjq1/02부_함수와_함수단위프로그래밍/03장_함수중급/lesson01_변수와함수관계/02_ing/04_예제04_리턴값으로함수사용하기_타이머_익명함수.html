@@ -5,16 +5,18 @@
 <title>예제</title>
 
     <script>
-        /*
+    /*
          예제 04: 1초마다 매개변수 값으로 넘긴 익명 함수가 호출됩니다.
          */
-
-
-    </script>
+setInterval(function(hello) {
+  document.write("안녕하세요. 환영합니다.");
+}, 1000);
+$("#btnStart").click(hello);
+</script>
 </head>
 
-	
-<body>
 
+<body>
+	<button id="btnStart">시작</button>
 </body>
-</html>	
+</html>
